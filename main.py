@@ -1,4 +1,3 @@
-import cv2
 import cv2 as cv
 import numpy as np
 from sklearn import cluster
@@ -30,7 +29,7 @@ def img_read(filename, flags=cv.IMREAD_COLOR):
     if SCALE == 1.0:
         return ret, img.shape
     else:
-        return cv2.resize(ret, dsize=(0, 0), fx=SCALE, fy=SCALE), img.shape
+        return cv.resize(ret, dsize=(0, 0), fx=SCALE, fy=SCALE), img.shape
 
 def benchmark(func_benchmark, laps=0):
     """
